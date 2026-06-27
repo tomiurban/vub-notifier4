@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0b1419">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="€ VÚB Notifier"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#1ec8b8"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Posiela VÚB platobné notifikácie na tvoj NAS"
+            android:textSize="14sp"
+            android:textColor="#7d92a0"
+            android:layout_marginBottom="32dp"/>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kontrolujem stav..."
+            android:textSize="14sp"
+            android:textColor="#e8eef0"
+            android:padding="16dp"
+            android:background="#16252e"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Queue sekcia -->
+        <TextView
+            android:id="@+id/tvQueueTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ČAKAJÚCE NOTIFIKÁCIE (0)"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:textColor="#7d92a0"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:id="@+id/queueContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnRetryNow"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Odoslať čakajúce teraz"
+            android:textColor="#06201c"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:backgroundTint="#f4b740"
+            android:visibility="gone"
+            android:layout_marginBottom="32dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#1e3038"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="URL SERVERA"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:textColor="#7d92a0"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etServerUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textUri"
+            android:textColor="#e8eef0"
+            android:textColorHint="#5d7280"
+            android:hint="http://100.x.x.x:8899/api/vub-notification"
+            android:padding="14dp"
+            android:background="#16252e"
+            android:textSize="13sp"
+            android:fontFamily="monospace"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Uložiť URL"
+            android:textColor="#06201c"
+            android:textStyle="bold"
+            android:backgroundTint="#1ec8b8"
+            android:layout_marginBottom="32dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#1e3038"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="POVOLENIE NA NOTIFIKÁCIE"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:textColor="#7d92a0"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aplikácia potrebuje prístup k notifikáciám aby mohla zachytiť VÚB platby. Číta VÝHRADNE notifikácie od VÚB Banking."
+            android:textSize="13sp"
+            android:textColor="#7d92a0"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnPermission"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Udeliť povolenie"
+            android:textColor="#e8eef0"
+            android:textStyle="bold"
+            android:backgroundTint="#1c2e38"/>
+
+    </LinearLayout>
+</ScrollView>
